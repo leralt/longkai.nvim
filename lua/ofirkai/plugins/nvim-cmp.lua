@@ -4,8 +4,8 @@ local M = {}
 ---The design I use for `window.completion` and `window.documentation`
 ---@type table
 M.design = {
-	border = 'single',
-	winhighlight = 'Normal:NormalFloat,CursorLine:Visual,Search:None',
+	border = 'rounded',
+	winhighlight = 'Normal:NormalFloatLSP,CursorLine:Visual,Search:None',
 	zindex = 1001,
 }
 

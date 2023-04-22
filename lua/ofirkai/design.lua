@@ -67,6 +67,9 @@ M.hl_groups = function(scheme)
 		NormalFloat = {
 			bg = scheme.ui_bg,
 		},
+		NormalFloatLSP = {
+			bg = scheme.background,
+		}
 		FloatNormal = {
             fg = scheme.teal,
 			bold = true,
