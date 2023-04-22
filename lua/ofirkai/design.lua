@@ -75,7 +75,7 @@ M.hl_groups = function(scheme)
 			bold = true,
         },
 		FloatBorder = {
-			fg = scheme.aqua,
+			fg = scheme.light_red,
 			bg = scheme.background,
 		},
 		Pmenu = {

@@ -4,9 +4,10 @@ local M = {}
 ---The design I use for `window.completion` and `window.documentation`
 ---@type table
 M.design = {
-	border = 'rounded',
-	winhighlight = 'Normal:NormalFloatLSP,CursorLine:Visual,Search:None',
+	border = "rounded",
+	winhighlight = "Normal:NormalFloatLSP,CursorLine:Visual,Search:Search",
 	zindex = 1001,
+	scrollbar = false,
 }
 
 ---nvim-cmp `window` configuration
@@ -43,7 +44,7 @@ M.kind_icons = {
 	Struct = "",
 	Event = "",
 	Operator = "",
-	TypeParameter = ""
+	TypeParameter = "",
 }
 
 
