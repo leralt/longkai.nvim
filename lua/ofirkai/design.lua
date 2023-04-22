@@ -69,7 +69,7 @@ M.hl_groups = function(scheme)
 		},
 		NormalFloatLSP = {
 			bg = scheme.background,
-		}
+		},
 		FloatNormal = {
             fg = scheme.teal,
 			bold = true,
@@ -197,9 +197,9 @@ M.hl_groups = function(scheme)
 			bold = true,
 		},
 		FloatTitle = {
-			fg = scheme.yellow,
+			fg = scheme.teal,
 			bold = true,
-			bg = scheme.ui_bg,
+			bg = scheme.background,
 		},
 		Directory = {
 			fg = scheme.aqua,
