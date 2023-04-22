@@ -8,7 +8,7 @@ M.scheme = {
 	background = '#282923',
 	secondary_background = '#1d2026',
 	ui_bg = '#1a1a18', -- background for ui, file tree and such.
-	telescope_bg = '#181816', -- Slightly darker than ui_bg
+	telescope_bg = '#282923', -- Slightly darker than ui_bg
 	winbar_bg = '#222219',
 	-- Base colors
 	white = '#f8f8f0',
@@ -24,6 +24,7 @@ M.scheme = {
 	light_red = '#f92672',
 	dark_pink = '#e878d2',
 	teal = '#3ae0b4',
+	telescope_fg = '#3ae0b4',
 	dark_yellow = '#ffd121',
 	dark_teal = '#26cca0',
 	-- Specific colors
@@ -36,7 +37,7 @@ M.scheme = {
 	cursor_line_bg = '#36352a',
 	mid_orange = '#de933c',
 	lightorange = '#dea255',
-	telescope_prompt = '#1d1d1a',
+	telescope_prompt = '#282923',
 	diff_add = '#3d5213',
 	diff_remove = '#4a0f23',
 	diff_change = '#27406b',
@@ -66,9 +67,13 @@ M.hl_groups = function(scheme)
 		NormalFloat = {
 			bg = scheme.ui_bg,
 		},
+		FloatNormal = {
+            fg = scheme.teal,
+			bold = true,
+        },
 		FloatBorder = {
-			fg = scheme.ui_bg,
-			bg = scheme.ui_bg,
+			fg = scheme.aqua,
+			bg = scheme.background,
 		},
 		Pmenu = {
 			fg = scheme.white,
@@ -76,7 +81,7 @@ M.hl_groups = function(scheme)
 		},
 		PmenuSel = {
 			fg = scheme.white,
-			bg = scheme.pmenu_sel_bg,
+			bg = scheme.orange,
 		},
 		PmenuSelBold = {
 			fg = scheme.white,
@@ -708,6 +713,9 @@ M.hl_groups = function(scheme)
 			bold = true,
 		},
 		-- kyazdani42/nvim-tree.lua
+		NeoTreeGitModified = { -- 已修改的文件的颜色
+			fg = "#fad147",
+	  	},
 		NvimTreeNormal = {
 			bg = scheme.ui_bg,
 		},
@@ -735,32 +743,33 @@ M.hl_groups = function(scheme)
 		},
 		-- nvim-telescope/telescope.nvim
 		TelescopeBorder = {
-			fg = scheme.telescope_bg,
+			fg = scheme.telescope_fg,
 			bg = scheme.telescope_bg,
 		},
 		TelescopeNormal = {
 			bg = scheme.telescope_bg,
 		},
 		TelescopePromptNormal = {
-			fg = scheme.white,
+			fg = scheme.yellow,
 			bg = scheme.telescope_prompt,
 		},
 		TelescopePromptBorder = {
-			fg = scheme.telescope_prompt,
+			fg = scheme.light_red,
 			bg = scheme.telescope_prompt,
 		},
 		TelescopePromptPrefix = {
-			fg = scheme.local_orange,
+			fg = scheme.light_red,
 			bg = scheme.telescope_prompt,
 		},
 		TelescopePromptTitle = {
-			fg = scheme.white,
+			fg = scheme.light_red,
 			bg = scheme.telescope_prompt,
 			bold = true,
 		},
 		TelescopeResultsTitle = {
-			fg = scheme.telescope_bg,
+			fg = scheme.telescope_fg,
 			bg = scheme.telescope_bg,
+			bold = true,
 		},
 		TelescopeSelection = {
 			bg = scheme.cursor_line_bg,
@@ -779,7 +788,8 @@ M.hl_groups = function(scheme)
 			bg = scheme.background,
 		},
 		TelescopePreviewTitle = {
-			fg = scheme.white,
+			fg = scheme.telescope_fg,
+			bold = true,
 		},
 		-- hrsh7th/nvim-cmp
 		CmpDocumentation = {
